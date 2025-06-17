@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            /* flex-wrap: wrap;*/
+            border: 2px solid black;
+            height: 300px;
+            margin-bottom: 34px;
+            /* Adjusted margin for better spacing */
+
+        }
+
+        .box {
+            background-color: rgb(64, 180, 219);
+            border: 2px solid rgb(7, 5, 5);
+            color: rgb(235, 229, 229);
+            <padding: 20px;
+            font-size: 1.2em;
+            text-align: center;
+            margin: 5px
+        }
+
+        h2,
+        h3 {
+            margin-top: 40px;
+            /*increased margin for better spacing */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox Tutorial</h1>
+    <!--Flexbox is a CSS layout module that allows you to design complex layouts with ease. It provides a more efficient way to align and distribute space among items in a container, even when their size is unknown or dynamic.-->
+
+    <h2>1.Basic Flexbox container</h2>
+    <div class="container"> <!--flex-direction is used to define the direction in which the flex items are placed in the flex container.-->
+        <!--flex-direction: row; is the default value, which arranges items in a row.-->
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+
+    <h2>2.Basic Flexbox container</h2>
+    <!--flex-direction is used to define the direction in which the flex items are placed in the flex container.-->
+    <div class="container" style="flex-direction: column;"> <!--row-->
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+
+    <h2>3. Justify Content</h2>
+    <div class="container" style="justify-content: space-between;">
+        <!--space-around, space-evenly, center, flex-start, flex-end-->
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+
+    <h2>4. Align Items</h2>
+    <div class="container" style="align-items: flex-end;">
+        <!--flex-start, center, baseline, stretch / justify content= to center-->
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+
+    <h2>5. Flex Wrap</h2>
+    <div class="container" style="flex-wrap: wrap;"> <!--nowrap, wrap-reverse-->
+        <!--flex-wrap is used to control how flex items wrap within the flex container.-->
+        <div class="box" style="flex: 1 1 100px;">Item 1</div>
+        <div class="box" style="flex: 1 1 100px;">Item 2</div>
+        <div class="box" style="flex: 1 1 100px;">Item 3</div>
+        <div class="box" style="flex: 1 1 100px;">Item 4</div>
+    </div>
+
+    <h2>6. Align Content</h2>
+    <div class="container" style="flex-wrap: wrap; align-content: space-between;"> <!--space-around, space-evenly, center, flex-start, flex-end-->
+        <!--align-content is used when there is extra space in the cross-axis, and it applies to the entire flex container.-->
+        <div class="box" style="flex: 1 1 100px;">Item 1</div>
+        <div class="box" style="flex: 1 1 100px;">Item 2</div>
+        <div class="box" style="flex: 1 1 100px;">Item 3</div>
+        <div class="box" style="flex: 1 1 100px;">Item 4</div>
+    </div>
+
+    <h2>7. Flex, Grow, Shrink & Basis</h2>
+    <div class="container" >
+        <div class="box" style="flex-basis: 1oopx;">Item 1</div> <!--flex-shrink/ flex- basis-->
+        <div class="box" style="flex-grow: 2;">Item 2</div> <!--flex-grow is used to specify how much a flex item should grow relative to the rest of the flex items in the container.-->
+        <div class="box" style="flex-grow: 1;">Item 3</div>
+    </div>
+
+    <h2>8. Order</h2>
+    <div class="container">
+        <div class="box" style="order:2;">Item 1</div> <!--order is used to change the visual order of flex items without changing their source order in the HTML.-->
+        <div class="box" style="order:1;">Item 2</div>
+        <div class="box" style="order:3;">Item 3</div>
+    </div>
+</body>
+</html> 
